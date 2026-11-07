@@ -234,13 +234,50 @@ main {
   font-style: normal;
 }
 
+.menu-toggle {
+  display: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 @media (max-width: 600px) {
-  html {
-    scroll-padding-top: 8rem;
+  .site-header {
+    flex-wrap: wrap;
   }
 
-  .site-header {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .menu {
+    display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    width: 100%;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .menu a {
+    padding-block: 0.25rem;
+  }
+
+  .menu--open {
+    display: flex;
   }
 }
