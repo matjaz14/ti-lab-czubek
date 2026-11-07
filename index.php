@@ -1,0 +1,92 @@
+<?php
+$firma = 'Szprycha';
+$rok = date('Y');
+?>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pracownia Rowerowa Szprycha w Bydgoszczy: przeglądy, naprawy i serwis rowerów. Sprawdź ofertę i cennik.">
+  <title>Szprycha – pracownia rowerowa, Bydgoszcz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer> </script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="logo">Szprycha</p>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-glowne">Menu</button>
+    <nav class="menu" id="menu-glowne" aria-label="Menu główne">
+      <a href="#uslugi">Usługi</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero__text">
+        <h1>Serwis rowerowy w Bydgoszczy</h1>
+        <p>Przeglądy, naprawy i regulacje. Szybko, uczciwie i w rozsądnej cenie.</p>
+      </div>
+      <img class="hero__img" src="hero.svg" width="320" height="200"
+           alt="Uproszczona ilustracja roweru">
+    </div>
+
+    <section id="uslugi" class="section">
+      <h2>Usługi</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Przegląd podstawowy</h3>
+          <p>Kontrola hamulców, przerzutek, łańcucha i ciśnienia w oponach.</p>
+          <p class="card__price">od 120 zł</p>
+        </article>
+
+        <article class="card card--highlight">
+          <p class="card__badge">Najczęściej wybierane</p>
+          <h3>Naprawy i regulacje</h3>
+          <p>Wymiana dętki, regulacja hamulców i przerzutek, centrowanie kół.</p>
+          <p class="card__price">od 40 zł</p>
+        </article>
+
+        <article class="card">
+          <h3>Serwis generalny</h3>
+          <p>Pełne czyszczenie, smarowanie, wymiana zużytych części i test jazdy.</p>
+          <p class="card__price">od 250 zł</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cennik" class="section">
+      <h2>Cennik</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th scope="col">Usługa</th>
+            <th scope="col" class="num">Cena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Przegląd podstawowy</td><td class="num">120 zł</td></tr>
+          <tr><td>Wymiana dętki</td><td class="num">40 zł</td></tr>
+          <tr><td>Regulacja hamulców i przerzutek</td><td class="num">80 zł</td></tr>
+          <tr><td>Wymiana łańcucha</td><td class="num">90 zł</td></tr>
+          <tr><td>Serwis generalny</td><td class="num">250 zł</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer id="kontakt" class="site-footer">
+    <h2>Kontakt</h2>
+    <address>
+      Pracownia Rowerowa Szprycha<br>
+      ul. Przykładowa 12, 85-000 Bydgoszcz<br>
+      Tel.: <a href="tel:+48500100200">500 100 200</a><br>
+      E-mail: <a href="mailto:kontakt@szprycha.example">kontakt@szprycha.example</a>
+    </address>
+    <p>Pn–Pt 9:00–17:00, sob. 9:00–13:00</p>
+    <p>&copy; <?= $rok ?> <?= $firma ?></p>
+  </footer>
+</body>
+</html>
