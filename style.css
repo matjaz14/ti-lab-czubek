@@ -93,11 +93,15 @@ main {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--color-primary);
+  text-decoration: none;
 }
 
 .menu {
